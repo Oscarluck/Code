@@ -7,6 +7,15 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
+    <context:component-scan base-package="com.home.action" />
+    <!-- 启动SpringMVC的注解功能，它会自动注册HandlerMapping、HandlerAdapter、ExceptionResolver的相-->
+    <mvc:annotation-driven />
+
+    <!-- enables annotation based configuration， 启动注解 -->
+    <context:annotation-config />
+
+    <mvc:default-servlet-handler/>
+
     <!-- 配置视图解析器 如何把handler 方法返回值解析为实际的物理视图 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name = "prefix" value="/"></property>
