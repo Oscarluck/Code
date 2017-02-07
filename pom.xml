@@ -8,8 +8,10 @@
   <name>sunshine.green.tee</name>
   <url>http://maven.apache.org</url>
   <properties>
-    <spring.version>4.3.5.RELEASE</spring.version>
+    <spring.version>3.2.6.RELEASE</spring.version>
     <sl4j.version>1.7.10</sl4j.version>
+    <mysql.version>5.1.27</mysql.version>
+    <org.hibernate>3.2.3.ga</org.hibernate>
   </properties>
   <dependencies>
     <dependency>
@@ -33,6 +35,8 @@
       <artifactId>log4j-over-slf4j</artifactId>
       <version>${sl4j.version}</version>
     </dependency>
+
+    <!-- springframework begin -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
@@ -73,6 +77,18 @@
       <artifactId>spring-webmvc</artifactId>
       <version>${spring.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <!-- springframework end -->
+
     <!-- java web -->
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -90,6 +106,83 @@
       <groupId>dom4j</groupId>
       <artifactId>dom4j</artifactId>
       <version>1.6.1</version>
+    </dependency>
+
+    <!-- mysql begin -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+    </dependency>
+    <!-- mysql end -->
+
+    <!-- hibernate begin -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate</artifactId>
+      <version>${org.hibernate}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>ehcache</artifactId>
+          <groupId>net.sf.ehcache</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>commons-logging</artifactId>
+          <groupId>commons-logging</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>commons-collections</artifactId>
+          <groupId>commons-collections</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>c3p0</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.1.2</version>
+    </dependency>
+    <!-- hibernate end -->
+
+    <!-- apache common -->
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.2</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>commons-logging</artifactId>
+          <groupId>commons-logging</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.3.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.8</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-pool2</artifactId>
+      <version>2.4.2</version>
     </dependency>
   </dependencies>
   <build>
