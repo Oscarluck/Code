@@ -8,9 +8,9 @@
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/home"/>
-        <property name="user" value="root"/>
-        <property name="password" value="dbroot"/>
+        <property name="jdbcUrl" value="${db.url}"/>
+        <property name="user" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
         <property name="acquireIncrement" value="10"/>
         <property name="initialPoolSize" value="15"/>
         <property name="maxIdleTime" value="60"/>
