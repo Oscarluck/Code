@@ -12,6 +12,7 @@
     <sl4j.version>1.7.10</sl4j.version>
     <mysql.version>5.1.27</mysql.version>
     <org.hibernate>3.2.3.ga</org.hibernate>
+    <log4j.version>1.2.17</log4j.version>
   </properties>
   <dependencies>
     <dependency>
@@ -33,6 +34,11 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>log4j-over-slf4j</artifactId>
+      <version>${sl4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-nop</artifactId>
       <version>${sl4j.version}</version>
     </dependency>
 

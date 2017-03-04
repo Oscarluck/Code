@@ -39,6 +39,7 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.10" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.10" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:log4j-over-slf4j:1.7.10" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-nop:1.7.10" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:3.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-test:3.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:3.2.6.RELEASE" level="project" />

@@ -19,4 +19,10 @@ public class UserServiceImpl extends BaseDaoImpl<User> implements UserService {
         log.info(user.getUserName());
         return this.findOne(User.class,"userId",userId);
     }
+
+    public <T> void testVarargs(T[] args){
+        for (int i = 0; i < args.length; i++){
+            System.out.printf("test = {}" + i,args);
+        }
+    }
 }

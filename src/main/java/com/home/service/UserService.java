@@ -7,4 +7,5 @@ import com.home.vo.User;
  */
 public interface UserService extends BaseService<User>{
     public User get(String userId);
+    public <T> void testVarargs(T... args);
 }
